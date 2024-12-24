@@ -1,0 +1,22 @@
+DATA: 000000110 # колво элемов
+00001010 # 10
+00001011 # 11
+00001100 # 12
+00001101 # 13
+00001110 # 14
+01000110
+
+START: PUSH
+       0
+       READ 
+       PUSH
+       1
+       READ
+       LDC
+       LOOP: DUP
+             READ
+             CMPC
+             DEC
+             JP END
+             JP LOOP
+       END: HLT
